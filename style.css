@@ -8,7 +8,16 @@
   --primary-color: hsl(170, 100%, 26%);
   --headline: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
+  --brand-beige: hsl(39, 100%, 97%);
+  --brand-light: hsl(148, 23%, 89%);
+
   font-size: 62.5%;
+}
+
+.wrapper {
+  width: 37.5rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 body {
@@ -18,38 +27,113 @@ body {
 }
 
 header {
-  width: 37.5rem;
-  margin: auto;
+  margin-top: 4.1rem;
 }
 
-h4 {
+header::before {
+  content: "";
+  width: 100vw;
+  height: 108rem;
+  background-color: var(--brand-light);
+  display: block;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+header h4 {
   font-size: 1.4rem;
   color: var(--primary-color);
   line-height: 150%;
+  margin-bottom: 1.6rem;
 }
 
-h1 {
+header h1 {
   color: var(--headline);
   line-height: 130%;
   font-size: 3.4rem;
+  margin-bottom: 2.4rem;
 }
 
-p {
+header p {
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 150%;
   color: var(--paragraph);
+  margin-bottom: 3.2rem;
 }
 
-button {
-  background-color: var(--primary-color);
+header button {
+  margin-bottom: 6rem;
+  padding: 1.6rem 3.2rem;
+  margin-right: auto;
+  margin-left: auto;
+
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 16px 32px;
+  gap: 1.6rem;
+
+
   border: none;
-  border-radius: 40px;
+  cursor: pointer;
+
+  border-radius: 40rem;
+  line-height: 1.8rem;
+
   font-weight: 700;
   font-size: 1.4rem;
-  line-height: 18px;
   color: #ffffff;
+  background-color: var(--primary-color);
+}
+
+header img {
+  width: 26.3rem;
+  display: block;
+  margin-inline: auto;
+  object-position: 0 20px;
+}
+
+.stats {
+  width: 32.7rem;
+  padding-block: 4rem;
+  margin-inline: auto;
+  
+  background-color: var(--brand-beige);
+  border: 1px solid var(--brand-light);
+  border-radius: .6rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+
+}
+
+.stat h3 {
+  font-size: 4.8rem;
+  color: var(--headline);
+  line-height: 130%;
+
+  margin-bottom: .4rem;
+  
+}
+
+.stat p {
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  line-height: 150%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1.6rem 2.4rem;
 }
