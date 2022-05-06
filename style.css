@@ -14,6 +14,8 @@
 
   --bg-light: hsl(180, 14%, 97%);
 
+  --brand-hover: hsl(170, 100%, 14%);
+
   font-size: 62.5%;
 
   --nav-height: 7.2rem;
@@ -87,6 +89,35 @@ section .content p {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 150%;
+}
+
+.button {
+  background: var(--primary-color);
+
+  border: none;
+  border-radius: 4rem;
+
+  margin-bottom: 6rem;
+
+  padding: 1.6rem 3.2rem;
+  width: fit-content;
+
+
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+
+  text-decoration: none;
+  transition: 250ms;
+}
+
+.button:hover {
+  background-color: var(--brand-hover);
 }
 
 /* NAVIGATION ======================================*/
@@ -247,37 +278,16 @@ body.menu-expanded .logo button path {
   z-index: -1;
 }
 
+#home .button {
+  margin-inline: auto;
+}
+
 #home p {
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 150%;
   color: var(--paragraph);
   margin-bottom: 3.2rem;
-}
-
-#home button {
-  margin-bottom: 6rem;
-  padding: 1.6rem 3.2rem;
-  margin-right: auto;
-  margin-left: auto;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 1.6rem;
-
-
-  border: none;
-  cursor: pointer;
-
-  border-radius: 40rem;
-  line-height: 1.8rem;
-
-  font-weight: 700;
-  font-size: 1.4rem;
-  color: #ffffff;
-  background-color: var(--primary-color);
 }
 
 #home img {
@@ -359,4 +369,44 @@ body.menu-expanded .logo button path {
 #about .content p {
   margin-top: 2.4rem;
   margin-bottom: 6rem;
+}
+
+/* CONTACT =======================================*/
+#contact {
+  text-align: left;
+}
+
+#contact header {
+  margin-bottom: 3.2rem;
+}
+
+#contact ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin-bottom: 3.2rem;
+}
+
+#contact ul li {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+/* FOOTER =======================================*/
+footer {
+  background: var(--primary-color);
+  padding-block: 6rem;
+
+  text-align: left;
+  color: white;
+}
+
+footer .logo svg {
+  width: 23.6rem;
+  height: 3.1rem;
+}
+
+footer .logo path {
+  fill: white;
 }
